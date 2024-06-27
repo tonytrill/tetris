@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build",
+        "type": "cppbuild",
+        "command": "clang++",
+        "args": [
+          "-std=c++17",
+          "-I/opt/homebrew/Cellar/sfml/2.6.1/include",
+          "-I${workspaceFolder}/src",
+          "-L/opt/homebrew/Cellar/sfml/2.6.1/lib",
+          "-L${workspaceFolder}/src",
+          "-o",
+          "${workspaceFolder}/bin/tetris",
+          "${workspaceFolder}/src/*.cpp",
+          "-lsfml-graphics",
+          "-lsfml-window",
+          "-lsfml-system"
+        ],
+        "options": {
+          "cwd": "${fileDirname}"
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "detail": "Generated task"
+      }
+    ]
+  }
